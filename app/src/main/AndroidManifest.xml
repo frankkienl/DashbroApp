@@ -1,0 +1,81 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="nl.frankkie.dashbro">
+
+    <!--
+    Misschien een leuk idee, een mockup call, van Rainbow Dash. laten lijken op de normale callscreen,
+    stem activatie zou helemaal tof zijn. Als ik nu "call rainbow dash" zeg, belt ie Rene Dwars.
+    Not cool. zou toch minimaal 19,99% cooler kunnen...
+    I.c.m een goede stem actrice, zou het een heel leuk appje kunnen zijn voor de bronies die een
+    ander voor de gek willen houden- of zichzelf
+
+    Ik kom mogelijk een volgende meet weer ff langs, zal dan ook e.e.a over donaties bespreken,
+    moet even kijken hoe de zaken gaan, maar het lijkt erop dat ik ruimer kom te zitten in de toekomst.
+
+    Groeten, en tot mogelijk brohoofs,
+    Mark/ Dash/Crashbro
+
+    ///////////////
+
+    Dit is een vreselijk app idee. I love it.
+
+    Hoe gaat dit werken:
+    Je maakt een contactpersoon Rainbow Dash aan in je contacten.
+    Met als telefoonnummer: 72462693274
+    Zodra je dit nummer draait zal deze app openen.
+
+    //-->
+    <uses-permission android:name="android.permission.PROCESS_OUTGOING_CALLS" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <receiver android:name=".FakeCallBroadcastReceiver">
+            <intent-filter android:priority="99999">
+                <action android:name="android.intent.action.NEW_OUTGOING_CALL" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </receiver>
+
+        <activity android:name=".FakeCallActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+    </application>
+
+</manifest>
+<!--
+usesless intent-filters
+
+            <intent-filter>
+                <action android:name="android.intent.action.CALL_PRIVILEGED" />
+                <action android:name="android.intent.action.NEW_OUTGOING_CALL" />
+                <action android:name="android.intent.action.MAIN" />
+                <action android:name="android.intent.action.CALL" />
+                <action android:name="android.intent.action.DIAL" />
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.BROWSABLE" />
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data android:scheme="tel" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.DIAL" />
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.BROWSABLE" />
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <action android:name="android.intent.action.CALL_PRIVILEGED" />
+                <action android:name="android.intent.action.NEW_OUTGOING_CALL" />
+
+                <data android:scheme="tel" />
+            </intent-filter>
+//-->
