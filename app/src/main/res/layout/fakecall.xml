@@ -3,68 +3,9 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <LinearLayout
+    <ImageView
+        android:src="@drawable/call_screen"
+        android:scaleType="centerCrop"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
-
-        <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:src="@android:drawable/sym_def_app_icon" />
-    </LinearLayout>
-
-    <!-- 6 buttons //-->
-    <LinearLayout
-        android:layout_alignParentBottom="true"
-        android:orientation="vertical"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-        <LinearLayout
-            android:orientation="horizontal"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-            <Button
-                android:text="Add call"
-                android:drawableTop="@android:drawable/ic_menu_add"
-                android:layout_weight="1"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content" />
-            <Button
-                android:text="Keypad"
-                android:drawableTop="@android:drawable/ic_dialog_dialer"
-                android:layout_weight="1"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content" />
-            <Button
-                android:drawableTop="@android:drawable/ic_menu_call"
-                android:text="End call"
-                android:layout_weight="1"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content" />
-        </LinearLayout>
-        <LinearLayout
-            android:orientation="horizontal"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-            <Button
-                android:drawableTop="@android:drawable/ic_lock_silent_mode_off"
-                android:text="Speaker"
-                android:layout_weight="1"
-                android:layout_width="0dp"
-                android:layout_height="match_parent" />
-            <Button
-                android:drawableTop="@android:drawable/stat_notify_call_mute"
-                android:text="Mute"
-                android:layout_weight="1"
-                android:layout_width="0dp"
-                android:layout_height="match_parent" />
-            <Button
-                android:drawableTop="@android:drawable/stat_sys_data_bluetooth"
-                android:text="Headset"
-                android:layout_weight="1"
-                android:layout_width="0dp"
-                android:layout_height="match_parent" />
-        </LinearLayout>
-    </LinearLayout>
+        android:layout_height="match_parent" />
 </RelativeLayout>
